@@ -1,0 +1,75 @@
+logging:
+    level:
+        org:
+            springframework: INFO
+spring:
+    data:
+        mongodb:
+            host: localhost
+            port: 27017
+            database: braigolabs
+            uri: mongodb://localhost/braigolabs
+    redis:
+        host: localhost
+        port: 6379
+server:
+    session:
+        cookie: 
+            max-age: 5256000
+        timeout: 5256000
+encryption:
+    social:
+        password: password
+        salt: c52a1bb6dec50195 
+oauth:
+    google:
+        key: 1055069594586-55711i6j0tkdif0mm94mvn4s18r46935.apps.googleusercontent.com
+        secret: 73nHMflmo5p22kOnc9CgUIik
+    facebook:
+        key: 171135519951616
+        secret: 1d9943fdd739d603bf37bbda4768f14a
+    twitter:
+        key: 950LPimuMow5iq9tGcuIs8jLm
+        secret: e05MZ8Cqxgk864SIZgeDrIe2dkZ93byHxNqUJwqfM7vG0XX5O9
+    dropbox:
+        key: jmo3zv4xcj92ez3
+        secret: nioqvne8uu7f2ec
+mail:
+   protocol: smtp
+   host: smtp.gmail.com
+   port: 587
+   debug: false
+   username: braigolabs16@gmail.com
+   password: magicsw@123
+   smtp:
+      auth: true
+      starttls:
+            enable: true
+multipart:
+     maxFileSize: 1024Mb
+     maxRequestSize: 1024Mb
+upload:
+     root: upload-dir
+     temp: temp-dir
+cloud:
+    aws:
+       credentials:
+                accessKey: AKIAIBRWZNVISUQUHU2A
+                secretKey: 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
+       region: US West (Oregon)
+       s3:
+        bucket: braigo-labs-text-bucket
+ocr:
+  data:/usr/share/tesseract-ocr/tessdata
+---
+spring:
+    profiles: int-marksharks
+    data:
+        mongodb:
+            host: localhost
+            port: 27017
+            database: intbraigolabs
+            uri: mongodb://localhost/intmarksharks
+    redis:
+        host: localhost
+        port: 6379
